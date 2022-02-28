@@ -21,6 +21,7 @@ export class ScheduleComponent  {
   public currentView: View = 'TimelineDay';
   public group: GroupModel = { enableCompactView: false, resources: ['Employee'] };
   public allowMultiple = false;
+  // Con esta linea de codigo se conecta
   public eventSettings: EventSettingsModel
 
 

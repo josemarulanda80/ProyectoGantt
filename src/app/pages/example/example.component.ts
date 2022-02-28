@@ -27,6 +27,8 @@ export class ExampleComponent {
   ];
   public group: GroupModel = { enableCompactView: false, resources: ['Employee'] };
   public allowMultiple = false;
+
+  //Con esta linea de codigo  se conecta los eventos 
   public eventSettings: EventSettingsModel = { dataSource: this.data };
 
   constructor() {

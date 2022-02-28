@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
       this.dato2.forEach(ele => this.datoEmployed.push(ele.summoned_users[0].id_user))
       //console.log(ele);
 //      console.log(this.datoEmployed);
-   
+   // No me fue posible colocar las tareas por que aun no entiendo la relación que existe entre los idde los empleados y de los eventos, una vez lo entienda, es relativamente sensillo ,ostrar los eventos
     })
   }
 
