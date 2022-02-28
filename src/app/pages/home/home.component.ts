@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   public dato: RESTBooksResponse;
   public dato2: Datum[] = [];
   public datoEmployed:IDUser[]=[]
-  public error:boolean=false;
+
  
   constructor(private service:ServicesGantt) { }
 
@@ -19,16 +19,15 @@ export class HomeComponent implements OnInit {
     this.searh();
   }
   searh() {
+  // 
     this.service.searchData().subscribe((ele) => {
       this.dato2 = ele.data
-      console.log(this.dato2)
+  //    console.log(this.dato2)
 
       this.dato2.forEach(ele => this.datoEmployed.push(ele.summoned_users[0].id_user))
       //console.log(ele);
-      console.log(this.datoEmployed);
-      if (!(this.datoEmployed.length > 0 )){
-        this.error=true;
-      }
+//      console.log(this.datoEmployed);
+   
     })
   }
 
