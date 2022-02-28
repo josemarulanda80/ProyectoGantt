@@ -1,0 +1,34 @@
+<div class="control-section">
+    <div class="drag-sample-wrapper">
+      <div class="schedule-container">
+        <ejs-schedule #scheduleObj cssClass='schedule-block-events' width='100%' height='auto' [group]="group"
+          [(currentView)]="currentView" [selectedDate]="selectedDate" [eventSettings]="eventSettings">
+          <e-resources>
+            <e-resource field='EmployeeId'  title='Employees' name='Employee' [dataSource]='Employes'
+              [allowMultiple]='allowMultiple' textField='name' idField='_id' >
+            </e-resource>
+          </e-resources>
+          <ng-template #resourceHeaderTemplate let-data>
+            <div class="template-wrap">
+              <div class="employee-category">
+                <div class="employee-name"><i class="bi bi-person"></i> {{getEmployeeName(data)}}</div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template #eventSettingsTemplate let-data>
+            <div class='template-wrap'>
+              <div class="subject">{{data.Subject}}</div>
+            </div>
+          </ng-template>
+          <e-views>
+            <e-view option="Day"></e-view>
+            <e-view option="TimelineDay"></e-view>
+            <e-view option="Week"></e-view>
+            <e-view option="TimelineMonth"></e-view>
+          </e-views>
+        </ejs-schedule>
+      </div>
+    </div>
+  </div>
+  
+  

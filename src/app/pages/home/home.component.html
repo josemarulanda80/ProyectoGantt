@@ -1,0 +1,5 @@
+<div class="" *ngIf="datoEmployed.length>0">
+    <app-schedule [Employes]="datoEmployed"></app-schedule>
+</div>
+<div  class="col-6 card card-body " *ngIf="!(datoEmployed.length>0)"> <strong>  la información esta cargando....</strong>
+</div>

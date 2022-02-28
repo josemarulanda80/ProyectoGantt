@@ -3,23 +3,32 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScheduleModule, RecurrenceEditorModule, DayService, WeekService ,WorkWeekService, MonthService,MonthAgendaService } from '@syncfusion/ej2-angular-schedule';
+import { HttpClientModule } from '@angular/common/http';
+
+import { ComponentsModule } from './components/components.module';
+import { PagesModule } from './pages/pages.module';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScheduleModule, RecurrenceEditorModule
+    SharedModule,
+    ComponentsModule,
+    PagesModule,
+    HttpClientModule
+  ],
+  exports: [
+    AppRoutingModule,
   ],
   providers: [
-    DayService
-    , WeekService ,
-    WorkWeekService,
-     MonthService,
-     MonthAgendaService],
+   
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
